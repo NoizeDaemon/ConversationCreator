@@ -134,8 +134,7 @@ public class ConversationEditor : Editor
                 }
 
 
-                conv.npc_alt_start_var =
-                    EditorGUILayout.Toggle("Variable affects NPC Message?", conv.npc_alt_start_var);
+                //conv.npc_alt_start_var = EditorGUILayout.Toggle("Variable affects NPC Message?", conv.npc_alt_start_var);
                 if (conv.npc_alt_start_var)
                 {
                     EditorGUILayout.BeginHorizontal();
@@ -1746,12 +1745,6 @@ public class ConversationEditor : Editor
             {
                 conv.npc_layer0.Add("");
             }
-            while (conv.cp_struct.Count < conv.cp_count)
-            {
-                conv.cp_struct.Add("");
-            }
-
-
         }
         EditorGUILayout.EndHorizontal();
 
@@ -1837,7 +1830,7 @@ public class ConversationEditor : Editor
         cHelp = EditorGUILayout.Foldout(cHelp, "Show cStruct help.");
         if (cHelp)
         {
-            EditorGUILayout.LabelField("Just like the fixed 4-4-4 structure is labeled in the \"non-custom\" part. So the index of the path, of the subpath, subsubpath, etc. seperated by a period.\n\n" +
+            EditorGUILayout.HelpBox("Just like the fixed 4-4-4 structure is labeled in the \"non-custom\" part. So the index of the path, of the subpath, subsubpath, etc. seperated by a period. For example the last pair in the flowchart would be \"3.3.3\". Always start to count at 0! (for better readability increase the width of the inspector)\n\n" +
                             "An example:\n\n\n" +
                             "P: What is your favourite band?\n" +
                             "N: Nickelback. Yours?\n" +
@@ -1850,7 +1843,6 @@ public class ConversationEditor : Editor
                             "		• N: Yeah, those germans. I don't like them either.\n" +
                             "		○ P: Mother Russia > Germany.\n" +
                             "		• N: Cyka blyat!\n" +
-                            "			\n" +
                             "			○ P: Rush B!\n" +
                             "			• N: Okay.\n" +
                             "			○ P: Don't rush B though.\n" +
@@ -1893,7 +1885,7 @@ public class ConversationEditor : Editor
                             "The suboption 2 Minutes to Midnight has the cStruct \"3.4\", because it's the 5th option in the Iron Maiden-path.\n" +
                             "Rush B, located on the third layer: \"0.2.0\"\n\n\n" +
                             "There is no need to follow a specific order when filling in the pairs, but doing so at least at the beginning will give you a better feeling for the cStruct. I suggest you layout your conversation like the one above and start from the top. If I did that, I could simply fill in my cStructs like this:\n\n" +
-                            "0 - 0.0 - 0.1 - 0.2 - 0.2.0 - 0.2.1 - 1 - 1.0 - 1.1 - 2 - 3 - 3.0 - 3.1 - 3.2 - 3.3 - 4 - 5 - 5.0 - 5.1 - 6");
+                            "0 - 0.0 - 0.1 - 0.2 - 0.2.0 - 0.2.1 - 1 - 1.0 - 1.1 - 2 - 3 - 3.0 - 3.1 - 3.2 - 3.3 - 4 - 5 - 5.0 - 5.1 - 6", MessageType.Info);
         }
 
         EditorGUILayout.Space();

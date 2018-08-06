@@ -15,6 +15,7 @@ public class PlayerSelectionButtonBehaviour : MonoBehaviour {
 
     public bool btnIsClicked;
     public int choice;
+    public string cChoice;
 
     private Vector3 textRectInitPos;
     private float page_h;
@@ -64,7 +65,7 @@ public class PlayerSelectionButtonBehaviour : MonoBehaviour {
     public void OnClick(string btnName)
     {
         //Debug.Log("Clicked =" + btnName);
-        choice = int.Parse(btnName.Substring(6));
+        cChoice = btnName;
         //Debug.Log("Choice -> " + choice);
         btnIsClicked = true;
     }

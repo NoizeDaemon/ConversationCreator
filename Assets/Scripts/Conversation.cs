@@ -38,7 +38,6 @@ public class Conversation : MonoBehaviour {
 
     //custom paths
     [TextArea(0, 3)]
-    public List<string> cp_struct;
     public int cp_count;
     [System.Serializable]
     public class stringDouble
@@ -50,9 +49,10 @@ public class Conversation : MonoBehaviour {
         public string npcText;
     }
     public List<stringDouble> doubleList0, doubleList1, doubleList2, doubleList3;
-
-    //test
-    public string testfield;
+    public List<stringDouble> activeList;
+    public int cStructLayer;
+    public string lastStruct;
+    public bool cP0;
 
     //---PROCESSING/INGAME---
     private Animator anim_npc;
@@ -91,13 +91,9 @@ public class Conversation : MonoBehaviour {
         containerTransform = GameObject.Find("ButtonContainer_Adjustable").GetComponent<Transform>();
         //instantiate list
         btnGo = new List<GameObject>();
-        if (player_layer0.Count > 4) CustomPathInitialization();
+        //if (player_layer0.Count > 4) CustomPathInitialization();
+        cStructLayer = 0;
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 
     //private void OnMouseUpAsButton()
     //{
@@ -109,32 +105,40 @@ public class Conversation : MonoBehaviour {
         if (!conversation_active)
         {
             conversation_active = true;
-            
 
-            if (npc_starts)
+
+            if (!npc_starts)
+            {
+                layer = 0;
+                PlayerWindowInitialization();
+            }
+            else
             {
                 layer = -1;
-                if (!npc_start_random)
+                if (!npc_alt_start)
                 {
-                    npc_text.text = npc_start_msg1;
+                    if (!npc_start_random) npc_text.text = npc_start_msg1;
+                    else npc_text.text = npc_start_random_msg[Random.Range(0, npc_start_random_msg.Count)];
                 }
                 else
                 {
-                    npc_text.text = npc_start_random_msg[Random.Range(0, npc_start_random_msg.Count)];
+                    if (!prev_Interaction)
+                    {
+                        if (!npc_start_random) npc_text.text = npc_start_msg1;
+                        else npc_text.text = npc_start_random_msg[Random.Range(0, npc_start_random_msg.Count)];
+                    }
+                    else
+                    {
+                        if (!npc_alt_start_random) npc_text.text = npc_start_msg2;
+                        else npc_text.text = npc_alt_start_random_msg[Random.Range(0, npc_alt_start_random_msg.Count)];
+                    }
                 }
                 npcMBC.Initialize();
                 StartCoroutine(WaitForNpcStop());
                 anim_npc.SetBool("IsOpen", true);
             }
-            else
-            {
-                layer = 0;
-                PlayerWindowInitialization();
-            }
         }
         else Debug.Log("There is an active conversation!");
-
-        
     }
 
     public void PlayerWindowInitialization()
@@ -228,30 +232,44 @@ public class Conversation : MonoBehaviour {
         }
         else //CUSTOM PATH HANDLING
         {
-            switch (path)
+            if (!cP0)
             {
-                case 4:
-                    if (doubleList0.Count == 0) EndConversation();
-                    else CustomPathPlayerWindowInitialization(doubleList0);
-                    break;
-                case 5:
-                    if (doubleList1.Count == 0) EndConversation();
-                    else CustomPathPlayerWindowInitialization(doubleList1);
-                    break;
-                case 6:
-                    if (doubleList2.Count == 0) EndConversation();
-                    else CustomPathPlayerWindowInitialization(doubleList2);
-                    break;
-                case 7:
-                    if (doubleList3.Count == 0) EndConversation();
-                    else CustomPathPlayerWindowInitialization(doubleList3);
-                    break;
+                switch (path)
+                {
+                    case 4:
+                        activeList = doubleList0;
+                        break;
+                    case 5:
+                        activeList = doubleList1;
+                        break;
+                    case 6:
+                        activeList = doubleList2;
+                        break;
+                    case 7:
+                        activeList = doubleList3;
+                        break;
+                }
+                if (activeList.Count == 0) EndConversation();
+                else CustomPlayerWindowInitialization(activeList);
+            }
+            else
+            {
+                activeList = activeList.FindAll(x => x.cStruct.Length > lastStruct.Length && x.cStruct.StartsWith(lastStruct));
+                if(activeList.Count == 0) EndConversation();
+                else CustomPlayerWindowInitialization(activeList);
             }
         }
     }
 
     public void EndConversation()
     {
+        path = 0;
+        sPath = 0;
+        ssPath = 0;
+        layer = 0;
+        cStructLayer = 0;
+        cP0 = false;
+
         prev_Interaction = true;
         conversation_active = false;
         Debug.Log("Conversation ended.");
@@ -262,16 +280,25 @@ public class Conversation : MonoBehaviour {
         Debug.Log("Started waiting for Player Choice");
         yield return new WaitUntil(() => playerSBB.btnIsClicked == true);
         Debug.Log("Player made their choice!");
-        NpcWindowInitialization(playerSBB.choice);
-        switch (layer)
+
+        if (!cP0)
         {
-            case 0: path = playerSBB.choice;
-                break;
-            case 1: sPath = playerSBB.choice;
-                break;
-            case 2: ssPath = playerSBB.choice;
-                break;
+            var cNum = int.Parse(playerSBB.cChoice.Substring(6));
+            switch (layer)
+            {
+                case 0:
+                    path = cNum;
+                    break;
+                case 1:
+                    sPath = cNum;
+                    break;
+                case 2:
+                    ssPath = cNum;
+                    break;
+            }
+            NpcWindowInitialization(cNum);
         }
+        else CustomNpcWindowInitialization(playerSBB.cChoice);
         playerSBB.btnIsClicked = false;
         anim_player.SetBool("IsOpen", false);
         foreach(GameObject clone in btnGo) Destroy(clone);
@@ -289,26 +316,66 @@ public class Conversation : MonoBehaviour {
         StopCoroutine(WaitForNpcStop());
     }
 
-    public void CustomPathInitialization()
+    //public void CustomPathInitialization()
+    //{
+    //    List<string> numStruct = new List<string>();
+    //    numStruct.AddRange(cp_struct[0].Split('>', '<', 'd', 't', 'q', 'p'));
+    //    //Debug
+    //    foreach(string s in numStruct) Debug.Log(s);
+    //    //
+    //    List<char> opStruct = new List<char>();
+    //    string str = Regex.Replace(cp_struct[0], @"[\d-]", string.Empty);
+    //    foreach (char c in str) opStruct.Add(c);
+    //    //Debug
+    //    Debug.Log(str);
+    //    foreach (char c in opStruct) Debug.Log(c);
+    //    //
+    //    Debug.Log("Index = " + doubleList0.FindIndex(x => x.cStruct == "0.1"));
+    //}
+
+    public void CustomPlayerWindowInitialization(List<stringDouble> l)
     {
-        List<string> numStruct = new List<string>();
-        numStruct.AddRange(cp_struct[0].Split('>', '<', 'd', 't', 'q', 'p'));
-        //Debug
-        foreach(string s in numStruct) Debug.Log(s);
-        //
-        List<char> opStruct = new List<char>();
-        string str = Regex.Replace(cp_struct[0], @"[\d-]", string.Empty);
-        foreach (char c in str) opStruct.Add(c);
-        //Debug
-        Debug.Log(str);
-        foreach (char c in opStruct) Debug.Log(c);
-        //
-        Debug.Log("Index = " + doubleList0.FindIndex(x => x.cStruct == "0.1"));
+        cP0 = true;
+        cStructLayer += 1;
+        Regex regex = new Regex(@"^\d+");
+
+        if (cStructLayer == 1)
+        {
+            var temp = l.FindAll(x => x.cStruct.Length == 1);
+            foreach (var c in temp)
+            {
+                //Debug.Log(c.cStruct + c.playerText + c.npcText);
+                if (c.cStruct == "" || c.playerText == "" || c.npcText == "") continue;
+                GameObject clone = Instantiate(btnPrefab, containerTransform);
+                clone.name = c.cStruct;
+                clone.GetComponent<TextMeshProUGUI>().text = "<sprite=\"6\" index=0> " + c.playerText;
+                btnGo.Add(clone);
+            }
+        }
+        else
+        {
+            var part = l.FindAll(x => x.cStruct.Length == cStructLayer * 2 - 1);
+            foreach (var c in part)
+            {
+                //Debug.Log(c.cStruct + c.playerText + c.npcText);
+                if (c.cStruct == "" || c.playerText == "" || c.npcText == "") continue;
+                GameObject clone = Instantiate(btnPrefab, containerTransform);
+                clone.name = c.cStruct;
+                clone.GetComponent<TextMeshProUGUI>().text = "<sprite=\"6\" index=0> " + c.playerText;
+                btnGo.Add(clone);
+            }
+        }
+        playerSBB.Initialize();
+        anim_player.SetBool("IsOpen", true);
+        StartCoroutine(WaitForPlayerChoice());
     }
 
-    public void CustomPathPlayerWindowInitialization(List<stringDouble> l)
+    public void CustomNpcWindowInitialization(string c)
     {
-        Debug.Log("This list contains " + l.Count + " elements.");
-        EndConversation();
+        npc_text.text = activeList.Find(x => x.cStruct == c).npcText;
+        npcMBC.Initialize();
+        anim_npc.SetBool("IsOpen", true);
+        lastStruct = c;
+        StartCoroutine(WaitForNpcStop());
     }
 }

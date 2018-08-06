@@ -324,7 +324,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: I can't kick Jesus. Wtf.
 --- !u!222 &10930187
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -734,14 +734,14 @@ RectTransform:
   m_GameObject: {fileID: 43821481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999744, y: 0.99999744, z: 0.99999744}
+  m_LocalScale: {x: 0.71374816, y: 0.71374816, z: 0.71374816}
   m_Children: []
-  m_Father: {fileID: 1333793415}
-  m_RootOrder: 3
+  m_Father: {fileID: 1916259505}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -265, y: 122}
+  m_AnchoredPosition: {x: -189.14375, y: 87.0775}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43821483
@@ -756,37 +756,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prev_Interaction: 0
-  npc_starts: 0
-  npc_start_msg1: 
+  npc_starts: 1
+  npc_start_msg1: Jo!
   npc_start_random: 0
   npc_start_random_msg: []
-  npc_alt_start: 0
-  npc_start_msg2: 
-  npc_alt_start_random: 0
-  npc_alt_start_random_msg: []
+  npc_alt_start: 1
+  npc_start_msg2: Jo man!
+  npc_alt_start_random: 1
+  npc_alt_start_random_msg:
+  - You again?
+  - Argh, spare me please.
+  - Can you - like - not annoy me?
+  - I am seriously thinking about hitting you as hard as I can.<page>If it isn't super
+    important, you shouldn't take that risk.
   npc_alt_start_var: 0
   npc_start_msg_var: 
   npc_alt_start_var_name: 
   npc_alt_start_var_condition: 0
   path_count: 0
-  player_msg_count: 04000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  player_msg_count: 02000000020000000200000000000000000000000000000000000000000000000000000000000000020000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   player_layer0:
-  - 0
+  - I need to talk to you about the fate of this world.
+  - We need to kill something.
+  - Do you believe in Jesus Christ?
   - 
-  - 
-  - 
-  - What is your fav band?
+  - What is your favourite band?
   player_layer1:
-  - 0.0
-  - 0.1
-  - 0.2
-  - 0.3
+  - It is about this giant monster that is currently eating houses on the east entrance.
+  - Oh, what will you have?
   - 
   - 
   - 
   - 
   - 
   - 
+  - He's currently outside kicking people around.
+  - He just killed Kenny.
   - 
   - 
   - 
@@ -794,6 +799,12 @@ MonoBehaviour:
   - 
   - 
   player_layer2:
+  - Are you fucking kidding me?
+  - Aren't you a vegan?
+  - 
+  - 
+  - Yes, but I am hungry as well.
+  - Yeah, true. Food can wait until we fuck up that monster.
   - 
   - 
   - 
@@ -820,14 +831,8 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - I can't kick Jesus. Wtf.
+  - I'll try.
   - 
   - 
   - 
@@ -859,22 +864,26 @@ MonoBehaviour:
   - 
   - 
   npc_layer0:
-  - 0
+  - 'Oh, okay then.
+
+    Go Ahead then.<page>... but make it quick.
+
+    The fate of the world isn''t as important to me as supper.'
+  - Nice, I love killing things.<page>Let's do this!
+  - Actually no.
   - 
-  - 
-  - 
-  - Nickelback, of course<page>What's yours?
+  - Nickelback. Yours?
   npc_layer1:
-  - 0.0
-  - 0.1
-  - 0.2
-  - 0.3
+  - As long as it won't eat my chicken teriyaki, I'm fine.
+  - Didn't you talk about the fate of the world?
   - 
   - 
   - 
   - 
   - 
   - 
+  - Well, then kick back?
+  - NOT KENNY!<page>Let's get this mo*fo.
   - 
   - 
   - 
@@ -882,8 +891,12 @@ MonoBehaviour:
   - 
   - 
   npc_layer2:
+  - I am not. Shit's delicious.
+  - Yes. I was joking.<page>Let's kill some giant monster.
   - 
   - 
+  - Well, let's eat then.
+  - Let's finish this quickly.<page>I hate cold food.
   - 
   - 
   - 
@@ -910,6 +923,8 @@ MonoBehaviour:
   - 
   - 
   - 
+  - I have no problem with that.
+  - Good luck.
   - 
   - 
   - 
@@ -940,29 +955,79 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  cp_struct:
-  - 1>3>2d1>2<2>5<2>2<1
   cp_count: 1
   doubleList0:
   - cStruct: 0
-    playerText: "Jo was up?\nI\nam\ndeeply \nsorry\n"
-    npcText: 
+    playerText: Rammstein.
+    npcText: Nice. Good old germany, am I right?
   - cStruct: 0.0
-    playerText: Sex?
-    npcText: Yes.
+    playerText: Yeah. Sad we lost WWII.
+    npcText: Dafuq is wrong with you?
   - cStruct: 0.1
-    playerText: Hiking?
-    npcText: No?
+    playerText: Well, I just like the band. Fuck germany though.
+    npcText: Yeah, those germans. I don't like them either.
+  - cStruct: 0.2
+    playerText: Mother Russia > Germany.
+    npcText: Cyka blyat!
+  - cStruct: 0.2.0
+    playerText: Rush B!
+    npcText: Okay.
+  - cStruct: 0.2.1
+    playerText: Don't rush B though.
+    npcText: What is wrong with you?
+  - cStruct: 1
+    playerText: Canibal Corpse.
+    npcText: "Br\xFCtal \\m/"
+  - cStruct: 1.0
+    playerText: "You know what else is br\xFCtal?"
+    npcText: Your dick?
+  - cStruct: 1.1
+    playerText: "I think people who use expressions like \"br\xFCtal\" & \"trve\"
+      should be executed."
+    npcText: '...'
+  - cStruct: 2
+    playerText: Slayer.
+    npcText: Meh. Overrated.
+  - cStruct: 3
+    playerText: Iron Maiden.
+    npcText: Love it. What is your favourite song?
+  - cStruct: 3.0
+    playerText: Afraid to shoot strangers.
+    npcText: I want to shoot my cum in your face.
+  - cStruct: 3.1
+    playerText: Fear of the dark.
+    npcText: '*sings* FEEEAAAAR OF THEEEEE DAAAAAAAARK!'
+  - cStruct: 3.2
+    playerText: Hallowed be thy name.
+    npcText: What a deep and powerful song.
+  - cStruct: 3.3
+    playerText: Aces High.
+    npcText: Neat.
+  - cStruct: 3.4
+    playerText: 2 Minutes to midnight.
+    npcText: YAS! Powerslave was my fav album!
+  - cStruct: 4
+    playerText: Skrillex.
+    npcText: That is no band. Now get out.
+  - cStruct: 5
+    playerText: My dick. Heard they have a gig tonight.
+    npcText: Never heard of them. In town?
+  - cStruct: 5.0
+    playerText: No, in your ass. With your allowance.
+    npcText: He he, sure.
+  - cStruct: 5.1
+    playerText: I actually made a stupid joke and I deeply apologize.
+    npcText: Ahaha, np.<page>Just don't do it again.
+  - cStruct: 6
+    playerText: Some Band
+    npcText: Some Comment
   doubleList1: []
   doubleList2: []
   doubleList3: []
-  testfield: 
+  activeList: []
+  cStructLayer: 0
+  lastStruct: 
+  cP0: 0
   containerTransform: {fileID: 0}
   btnPrefab: {fileID: 0}
 --- !u!114 &43821484
@@ -1373,7 +1438,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Yes, but I am hungry as well.
 --- !u!222 &48943978
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1741,7 +1806,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 24
+  m_Text: 
 --- !u!222 &82624808
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1928,7 +1993,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 9
+  m_Text: 
 --- !u!222 &100232205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3461,7 +3526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 
 --- !u!222 &162729356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3781,7 +3846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Well, since my dick is huge. Yes.
+  m_Text: Oh, what will you have?
 --- !u!222 &168276826
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4112,7 +4177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: I'll try.
 --- !u!222 &183358752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4507,6 +4572,7 @@ MonoBehaviour:
   downInd: {fileID: 1920069446}
   btnIsClicked: 0
   choice: 0
+  cChoice: 
 --- !u!1 &207191587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4533,16 +4599,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 207191587}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.71375, y: 0.71375, z: 0.71375}
   m_Children: []
-  m_Father: {fileID: 1333793415}
-  m_RootOrder: 4
+  m_Father: {fileID: 1916259505}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157, y: 122}
+  m_AnchoredPosition: {x: -112.05875, y: 87.0775}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207191589
@@ -4823,13 +4889,15 @@ MonoBehaviour:
   - 
   - 
   - 
-  cp_struct: []
   cp_count: 0
   doubleList0: []
   doubleList1: []
   doubleList2: []
   doubleList3: []
-  testfield: 
+  activeList: []
+  cStructLayer: 0
+  lastStruct: 
+  cP0: 0
   containerTransform: {fileID: 0}
   btnPrefab: {fileID: 0}
 --- !u!114 &207191593
@@ -6149,7 +6217,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What you consider and what is true, are different.
+  m_Text: 
 --- !u!222 &262197894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6336,7 +6404,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 33
+  m_Text: 
 --- !u!222 &271411072
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6411,7 +6479,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12
+  m_Text: 
 --- !u!222 &277754196
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6486,9 +6554,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'That sounds great.
-
-    <page>I meet you infront of your house at sunset.'
+  m_Text: Well, then kick back?
 --- !u!222 &286097443
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6529,7 +6595,7 @@ RectTransform:
   - {fileID: 1618507660}
   - {fileID: 1237095457}
   m_Father: {fileID: 1333793415}
-  m_RootOrder: 12
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7191,14 +7257,14 @@ RectTransform:
   m_GameObject: {fileID: 332584162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999744, y: 0.99999744, z: 0.99999744}
+  m_LocalScale: {x: 0.71374816, y: 0.71374816, z: 0.71374816}
   m_Children: []
-  m_Father: {fileID: 1333793415}
-  m_RootOrder: 5
+  m_Father: {fileID: 1916259505}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53, y: 122}
+  m_AnchoredPosition: {x: -37.82875, y: 87.0775}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332584164
@@ -7393,13 +7459,15 @@ MonoBehaviour:
   - 
   - 
   - 
-  cp_struct: []
   cp_count: 0
   doubleList0: []
   doubleList1: []
   doubleList2: []
   doubleList3: []
-  testfield: 
+  activeList: []
+  cStructLayer: 0
+  lastStruct: 
+  cP0: 0
   containerTransform: {fileID: 0}
   btnPrefab: {fileID: 0}
 --- !u!114 &332584165
@@ -7879,7 +7947,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Go to the forrest and investigate the mansion.
+  m_Text: Are you fucking kidding me?
 --- !u!222 &336823775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8216,7 +8284,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 
 --- !u!222 &344908045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9502,7 +9570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 31
+  m_Text: 
 --- !u!222 &381119225
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9646,7 +9714,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 13
+  m_Text: 
 --- !u!222 &392821529
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10388,7 +10456,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: We could hike the montain together, heard the view is perfect.
+  m_Text: He's currently outside kicking people around.
 --- !u!222 &422844883
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10687,7 +10755,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What for?
+  m_Text: Actually no.
 --- !u!222 &424229092
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11193,7 +11261,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Well, I consider myself quite strong.
+  m_Text: 
 --- !u!222 &450539905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11562,7 +11630,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 17
+  m_Text: 
 --- !u!222 &471295517
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12086,7 +12154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 19
+  m_Text: 
 --- !u!222 &514659845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13657,7 +13725,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 32
+  m_Text: 
 --- !u!222 &592012924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14567,7 +14635,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Oh you. *blushes*
+  m_Text: 
 --- !u!222 &648746621
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14754,7 +14822,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 27
+  m_Text: 
 --- !u!222 &656925872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15010,7 +15078,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Are you free tonight?
+  m_Text: Do you believe in Jesus Christ?
 --- !u!222 &666986005
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15242,236 +15310,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672229185}
   m_CullTransparentMesh: 0
---- !u!1 &688327375
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 688327377}
-  - component: {fileID: 688327376}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &688327376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 688327375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2172b3a6432d04e89d2fc4c79febb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prev_Interaction: 0
-  npc_starts: 0
-  npc_start_msg1: 
-  npc_start_random: 0
-  npc_start_random_msg: []
-  npc_alt_start: 0
-  npc_start_msg2: 
-  npc_alt_start_random: 0
-  npc_alt_start_random_msg: []
-  npc_alt_start_var: 0
-  npc_start_msg_var: 
-  npc_alt_start_var_name: 
-  npc_alt_start_var_condition: 0
-  path_count: 0
-  player_msg_count: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  player_layer0: []
-  player_layer1:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  player_layer2:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  npc_layer0: []
-  npc_layer1:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  npc_layer2:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  cp_struct: []
-  cp_count: 0
-  doubleList0: []
-  doubleList1: []
-  doubleList2: []
-  doubleList3: []
-  testfield: 
-  containerTransform: {fileID: 0}
-  btnPrefab: {fileID: 0}
---- !u!4 &688327377
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 688327375}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 730.9489, y: -1573.9048, z: -14}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691896726
 GameObject:
   m_ObjectHideFlags: 0
@@ -16574,7 +16412,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yeah, I guessed so, that's why I came straight to you.
+  m_Text: 
 --- !u!222 &749343507
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16761,9 +16599,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You know..
-
-    That is a pretty inconsiderate thing to ask.'
+  m_Text: NOT KENNY!<page>Let's get this mo*fo.
 --- !u!222 &759364584
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17113,7 +16949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 
 --- !u!222 &787377649
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17737,7 +17573,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 28
+  m_Text: 
 --- !u!222 &816216451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17950,7 +17786,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I see.<page>It's probably dangerous, right?
+  m_Text: 'Oh, okay then.
+
+    Go Ahead then.<page>... but make it quick.
+
+    The fate of the world isn''t as important to me as supper.'
 --- !u!222 &846563303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18430,7 +18270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 35
+  m_Text: 
 --- !u!222 &871682743
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18817,7 +18657,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 14
+  m_Text: 
 --- !u!222 &882384228
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19073,7 +18913,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Oh lord! What do we need to do?
+  m_Text: As long as it won't eat my chicken teriyaki, I'm fine.
 --- !u!222 &899193918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19260,7 +19100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Yeah, true. Food can wait until we fuck up that monster.
 --- !u!222 &904141717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19666,7 +19506,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 38
+  m_Text: 
 --- !u!222 &931864694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19741,7 +19581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6
+  m_Text: 
 --- !u!222 &942189438
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19997,7 +19837,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: If you're a weakling, yes.
+  m_Text: 
 --- !u!222 &944682588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20870,7 +20710,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 40
+  m_Text: 
 --- !u!222 &990067797
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21302,7 +21142,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 
 --- !u!222 &1006826599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21669,7 +21509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: I have no problem with that.
 --- !u!222 &1015849049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23163,7 +23003,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 37
+  m_Text: 
 --- !u!222 &1098742692
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24853,7 +24693,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Oh hell no, too scary shit.<page>Sorry, boi.
+  m_Text: I am not. Shit's delicious.
 --- !u!222 &1151116922
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25152,7 +24992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 18
+  m_Text: 
 --- !u!222 &1155558611
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25740,7 +25580,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
+  m_Text: 
 --- !u!222 &1177965731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27232,7 +27072,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 23
+  m_Text: 
 --- !u!222 &1209826109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27367,7 +27207,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Good luck.
 --- !u!222 &1217485521
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28082,7 +27922,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 8
+  m_Text: 
 --- !u!222 &1249888235
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28510,7 +28350,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 
 --- !u!222 &1261834896
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28977,14 +28817,14 @@ RectTransform:
   m_GameObject: {fileID: 1276885121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999744, y: 0.99999744, z: 0.99999744}
+  m_LocalScale: {x: 0.71374816, y: 0.71374816, z: 0.71374816}
   m_Children: []
-  m_Father: {fileID: 1333793415}
-  m_RootOrder: 8
+  m_Father: {fileID: 1916259505}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 263.99994, y: 122}
+  m_AnchoredPosition: {x: 188.42996, y: 87.0775}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276885123
@@ -29179,13 +29019,15 @@ MonoBehaviour:
   - 
   - 
   - 
-  cp_struct: []
   cp_count: 0
   doubleList0: []
   doubleList1: []
   doubleList2: []
   doubleList3: []
-  testfield: 
+  activeList: []
+  cStructLayer: 0
+  lastStruct: 
+  cP0: 0
   containerTransform: {fileID: 0}
   btnPrefab: {fileID: 0}
 --- !u!114 &1276885124
@@ -30313,7 +30155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Not when a stronf man like you accompanies me.
+  m_Text: 
 --- !u!222 &1317826415
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30388,7 +30230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's fuck.
+  m_Text: We need to kill something.
 --- !u!222 &1317997225
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30575,7 +30417,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25
+  m_Text: 
 --- !u!222 &1325546702
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30725,7 +30567,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 29
+  m_Text: 
 --- !u!222 &1333775207
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30821,12 +30663,6 @@ RectTransform:
   - {fileID: 1121899160}
   - {fileID: 1524302614}
   - {fileID: 522674895}
-  - {fileID: 43821482}
-  - {fileID: 207191588}
-  - {fileID: 332584163}
-  - {fileID: 2054167882}
-  - {fileID: 1844684801}
-  - {fileID: 1276885122}
   - {fileID: 1518313673}
   - {fileID: 1335127102}
   - {fileID: 1635009639}
@@ -30870,7 +30706,7 @@ RectTransform:
   - {fileID: 1920069447}
   - {fileID: 1557156579}
   m_Father: {fileID: 1333793415}
-  m_RootOrder: 10
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31501,7 +31337,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 26
+  m_Text: 
 --- !u!222 &1357043451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31826,7 +31662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I was wondering if you could help me with my mission?
+  m_Text: I need to talk to you about the fate of this world.
 --- !u!222 &1372434086
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32902,7 +32738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fuck our brains out.
+  m_Text: Aren't you a vegan?
 --- !u!222 &1417269171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33285,7 +33121,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 11
+  m_Text: 
 --- !u!222 &1419088456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33685,7 +33521,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 16
+  m_Text: 
 --- !u!222 &1445131031
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34203,7 +34039,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hell yeah.
+  m_Text: Yes. I was joking.<page>Let's kill some giant monster.
 --- !u!222 &1451774230
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34278,8 +34114,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: We kinda need to fight this giant monster, that will destroy all life on
-    earth if we don't stop it.
+  m_Text: 
 --- !u!222 &1457606379
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34653,7 +34488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 22
+  m_Text: 
 --- !u!222 &1462952214
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35288,7 +35123,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4
+  m_Text: 
 --- !u!222 &1508354807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35400,7 +35235,7 @@ RectTransform:
   - {fileID: 874019522}
   - {fileID: 1195695302}
   m_Father: {fileID: 1333793415}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -37078,7 +36913,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 7
+  m_Text: 
 --- !u!222 &1569600301
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38397,7 +38232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I really need someone to walk my dog while I fuck your brother.
+  m_Text: He just killed Kenny.
 --- !u!222 &1623892422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38628,7 +38463,7 @@ RectTransform:
   - {fileID: 1724496996}
   - {fileID: 533962437}
   m_Father: {fileID: 1333793415}
-  m_RootOrder: 11
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -39534,11 +39369,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sorry, pal.
-
-    <page>Got an overnight shift.
-
-    Maybe tomorrow?'
+  m_Text: 
 --- !u!222 &1673548904
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41728,7 +41559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Okay.
+  m_Text: Nice, I love killing things.<page>Let's do this!
 --- !u!222 &1755310531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43096,7 +42927,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 34
+  m_Text: 
 --- !u!222 &1817989003
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43246,7 +43077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Let's finish this quickly.<page>I hate cold food.
 --- !u!222 &1826237847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43433,11 +43264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'That''s sweet.
-
-    <page>Just fyi:
-
-    I am everything but straight.'
+  m_Text: 
 --- !u!222 &1840403745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43561,14 +43388,14 @@ RectTransform:
   m_GameObject: {fileID: 1844684800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999744, y: 0.99999744, z: 0.99999744}
+  m_LocalScale: {x: 0.71374816, y: 0.71374816, z: 0.71374816}
   m_Children: []
-  m_Father: {fileID: 1333793415}
-  m_RootOrder: 7
+  m_Father: {fileID: 1916259505}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 158, y: 122}
+  m_AnchoredPosition: {x: 112.77249, y: 87.0775}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844684802
@@ -43763,13 +43590,15 @@ MonoBehaviour:
   - 
   - 
   - 
-  cp_struct: []
   cp_count: 0
   doubleList0: []
   doubleList1: []
   doubleList2: []
   doubleList3: []
-  testfield: 
+  activeList: []
+  cStructLayer: 0
+  lastStruct: 
+  cP0: 0
   containerTransform: {fileID: 0}
   btnPrefab: {fileID: 0}
 --- !u!114 &1844684803
@@ -44297,7 +44126,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 21
+  m_Text: 
 --- !u!222 &1853585131
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44372,7 +44201,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Well, let's eat then.
 --- !u!222 &1861418612
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45328,7 +45157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Okay.
+  m_Text: 
 --- !u!222 &1893984226
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45403,7 +45232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Put it in my butt, please.
+  m_Text: Didn't you talk about the fate of the world?
 --- !u!222 &1894898463
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45667,6 +45496,105 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1911569716}
   m_CullTransparentMesh: 0
+--- !u!1 &1916259501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1916259505}
+  - component: {fileID: 1916259504}
+  - component: {fileID: 1916259503}
+  - component: {fileID: 1916259502}
+  m_Layer: 5
+  m_Name: Conversations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1916259502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916259501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1916259503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916259501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1916259504
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916259501}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
+--- !u!224 &1916259505
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916259501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 43821482}
+  - {fileID: 207191588}
+  - {fileID: 332584163}
+  - {fileID: 2054167882}
+  - {fileID: 1844684801}
+  - {fileID: 1276885122}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1920069446
 GameObject:
   m_ObjectHideFlags: 0
@@ -46365,7 +46293,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yes, indeed. It is a mission to save the whole village from total destruction.
+  m_Text: It is about this giant monster that is currently eating houses on the east
+    entrance.
 --- !u!222 &1950279468
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46621,7 +46550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is just a test path with consistent numbers.
+  m_Text: 
 --- !u!222 &1966248788
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47429,7 +47358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 15
+  m_Text: 
 --- !u!222 &2027255234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47717,7 +47646,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 36
+  m_Text: 
 --- !u!222 &2046574416
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47792,7 +47721,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &2049263159
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47828,14 +47757,14 @@ RectTransform:
   m_GameObject: {fileID: 2054167881}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999744, y: 0.99999744, z: 0.99999744}
+  m_LocalScale: {x: 0.71374816, y: 0.71374816, z: 0.71374816}
   m_Children: []
-  m_Father: {fileID: 1333793415}
-  m_RootOrder: 6
+  m_Father: {fileID: 1916259505}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 122}
+  m_AnchoredPosition: {x: 35.6875, y: 87.0775}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054167883
@@ -48030,13 +47959,15 @@ MonoBehaviour:
   - 
   - 
   - 
-  cp_struct: []
   cp_count: 0
   doubleList0: []
   doubleList1: []
   doubleList2: []
   doubleList3: []
-  testfield: 
+  activeList: []
+  cStructLayer: 0
+  lastStruct: 
+  cP0: 0
   containerTransform: {fileID: 0}
   btnPrefab: {fileID: 0}
 --- !u!114 &2054167884
@@ -48875,7 +48806,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 39
+  m_Text: 
 --- !u!222 &2087593844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49511,6 +49442,7 @@ MonoBehaviour:
   downInd: {fileID: 1797573368}
   btnIsClicked: 0
   choice: 0
+  cChoice: 
 --- !u!114 &2112597208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50274,7 +50206,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fuck you!
+  m_Text: 
 --- !u!222 &2140192611
 CanvasRenderer:
   m_ObjectHideFlags: 0
