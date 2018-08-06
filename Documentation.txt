@@ -1,0 +1,106 @@
+﻿$1 = index player
+$2 = string player
+$3 = index npc
+$4 = string npc
+
+conv\.npc_layer2\[(\b[0-9]*)\] = EditorGUILayout\.TextField\("([^\"]*)", conv\.npc_layer2\[(\b[0-9]*)\]\);
+
+replace with
+
+EditorGUILayout.BeginHorizontal();\r\nEditorGUILayout.LabelField("$2", GUILayout.MaxWidth(90));\r\nconv.npc_layer2[$1] = EditorGUILayout.TextArea(conv.npc_layer2[$1]);\r\nEditorGUILayout.EndHorizontal();
+
+4 * path; i < 4 * path + 4
+
+
+CustomPathExample:
+
+
+P: What is your favourite band?
+N: Nickelback. Yours?
+
+Answer Options:
+
+	P: Rammstein.
+	N: Nice. Good old germany, am I right?
+
+		P: Yeah. Sad we lost WWII.
+		N: Dafuq is wrong with you?
+
+		P: Well, I just like the band. Fuck germany though.
+		N: Yeah, those germans. I don't like them either.
+
+		P: Mother Russia > Germany.
+		N: Cyka blyat!
+			
+			P: Rush B!
+			N: Okay.
+
+			P: Don't rush B though.
+			N: What is wrong with you?
+
+	P: Canibal Corpse.
+	N: Brütal \m/
+
+		P: You know what else is brütal?
+		N: Your dick?
+
+		P: I think people who use expressions like "brütal" & "trve" should be executed.
+		N: ...
+
+	P: Slayer.
+	N: Meh. Overrated.
+
+	P: Iron Maiden.
+	N: Love it. What is your favourite song?
+
+		P: Afraid to shoot strangers.
+		N: I want to shoot my cum in your face.
+
+		P: Fear of the dark.
+		N: *sings* FEEEAAAAR OF THEEEEE DAAAAAAAARK!
+
+		P: Hallowed be thy name.
+		N: What a deep and powerful song.
+
+		P: Aces High.
+		N: Neat.
+
+		P: 2 Minutes to midnight.
+		N: YAS! Powerslave was my fav album!
+		
+	P: Skrillex.
+	N: That is no band. Now get out.
+
+	P: My dick. Heard they have a gig tonight.
+	N: Never heard of them. In town?
+
+		P: No, in your ass. With your allowance.
+		N: He he, sure.
+		
+		P: I actually made a stupid joke and I deeply apologize.
+		N: Ahaha, np.<page>Just don't do it again.
+
+	P: Some Band
+	N: Some Comment
+
+
+Syntax: 1>3>2d1>2<2>5<2>2<1
+
+> .. for down one layer
+< .. for up one layer
+d .. for up two layers
+t .. for up three layers
+q .. for up four layers
+p .. for up five layers
+
+List: Size 21
+
+Rammstein.$Nice. Good old germany, am I right?
+Yeah. Sad we lost WWII.$Dafuq is wrong with you?
+Well, I just like the band. Fuck germany though.$Yeah, those germans. I don't like them either.
+Mother Russia > Germany.$Cyka blyat!
+Rush B!$Okay.
+Don't rush B though.$What is wrong with you?
+Canibal Corpse.$Brütal \m/
+...
+And so on.
