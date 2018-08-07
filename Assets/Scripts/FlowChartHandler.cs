@@ -35,6 +35,7 @@ public class FlowChartHandler : MonoBehaviour {
         }
 	}
 
+    [ExecuteInEditMode]
     public void Initialize()
     {
         //This could be fully variable
@@ -74,6 +75,7 @@ public class FlowChartHandler : MonoBehaviour {
         }
     }
 
+    [ExecuteInEditMode]
     public void UpdateChart()
     {
         for (int i = 0; i < 4; i++)
@@ -98,6 +100,34 @@ public class FlowChartHandler : MonoBehaviour {
             Debug.Log("Layer 2 -" + i);
             fc_player_layer2[i].text = conv.player_layer2[i];
             fc_npc_layer2[i].text = conv.npc_layer2[i];
+        }
+    }
+
+    [ExecuteInEditMode]
+    public void ClearChart()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (conv.player_layer0.Count > i)
+            {
+                Debug.Log("Layer 0 -" + i);
+                fc_player_layer0[i].text = "";
+                fc_npc_layer0[i].text = "";
+            }
+            else Debug.Log("Layer 0 -" + i + " does not exist atm.");
+
+        }
+        for (int i = 0; i < 16; i++)
+        {
+            Debug.Log("Layer 1 -" + i);
+            fc_player_layer1[i].text = "";
+            fc_npc_layer1[i].text = "";
+        }
+        for (int i = 0; i < 64; i++)
+        {
+            Debug.Log("Layer 2 -" + i);
+            fc_player_layer2[i].text = "";
+            fc_npc_layer2[i].text = "";
         }
     }
 }

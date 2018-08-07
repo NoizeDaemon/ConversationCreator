@@ -17,15 +17,21 @@ public class FlowChartHandlerEditor : Editor {
 
 
         EditorGUILayout.BeginHorizontal();
-        if(GUILayout.Button("Initialize Flowchart!"))
+        if(GUILayout.Button("Initialize"))
         {
             flow.Initialize();
             fc_initialized = true;
         }
 
-        if(GUILayout.Button("Update Flowchart!"))
+        if (GUILayout.Button("Update"))
         {
             flow.UpdateChart();
+            EditorUtility.SetDirty(target);
+        }
+
+        if (GUILayout.Button("Clear"))
+        {
+            flow.ClearChart();
             EditorUtility.SetDirty(target);
         }
         EditorGUILayout.EndHorizontal();
@@ -40,7 +46,7 @@ public class FlowChartHandlerEditor : Editor {
         {
             base.OnInspectorGUI();
         }
-
         
+
     }
 }

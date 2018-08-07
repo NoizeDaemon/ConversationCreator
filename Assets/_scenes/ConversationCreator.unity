@@ -779,7 +779,7 @@ MonoBehaviour:
   - I need to talk to you about the fate of this world.
   - We need to kill something.
   - Do you believe in Jesus Christ?
-  - 
+  - jo
   - What is your favourite band?
   player_layer1:
   - It is about this giant monster that is currently eating houses on the east entrance.
@@ -46550,7 +46550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: jo
 --- !u!222 &1966248788
 CanvasRenderer:
   m_ObjectHideFlags: 0
